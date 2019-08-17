@@ -2,7 +2,7 @@
     <div>
         <div class="title">热销推荐</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+            <li class="item border-bottom" v-for="item of list" :key="item.id">
                 <div class="item-img-wrapper">
                     <img :src="item.imgUrl" class="item-img">
                 </div>
@@ -19,30 +19,8 @@
 <script>
 export default {
     name:'HomeRecommend',
-    data () {
-        return {
-            recommendList:[{
-            id:'0001',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1905/32/32ad7003179269d2a3.img.jpg_200x200_aee761e4.jpg',
-            title:'谭鸭血老火锅',
-            desc:"麻辣又好吃"
-        },{
-            id:'0002',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1905/32/32ad7003179269d2a3.img.jpg_200x200_aee761e4.jpg',
-            title:'谭鸭血老火锅',
-            desc:"麻辣又好吃"
-        },{
-            id:'0003',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1905/32/32ad7003179269d2a3.img.jpg_200x200_aee761e4.jpg',
-            title:'谭鸭血老火锅',
-            desc:"麻辣又好吃"
-        },{
-            id:'0004',
-            imgUrl:'http://img1.qunarzz.com/sight/p0/1905/32/32ad7003179269d2a3.img.jpg_200x200_aee761e4.jpg',
-            title:'谭鸭血老火锅',
-            desc:"麻辣又好吃"
-        }]
-        }
+    props: {
+        list: Array
     }
 }
 </script>
