@@ -33,7 +33,7 @@ export default {
     margin-right: .1rem
     background-size: .4rem 3rem
   .item-title 
-    line-height: .6rem
+    line-height: .48rem
     font-size: .3rem
     padding: .2rem
   .item-children
