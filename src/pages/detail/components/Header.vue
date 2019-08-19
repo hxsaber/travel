@@ -4,7 +4,9 @@
       <div class="iconfont header-abs-back">&#xe624;</div>
     </router-link>
     <div class="header-fixed" v-show="!showAbs" :style="opacityStyle">
-      <div class="iconfont header-fixed-back">&#xe624;</div>
+      <router-link to="/">  
+        <div class="iconfont header-fixed-back">&#xe624;</div>
+      </router-link>  
       景点详情
     </div>
   </div>    
@@ -35,6 +37,9 @@ export default {
   },
   activated () {
     window.addEventListener('scroll', this.handleScroll)
+  },
+  deactivated () {
+    window.removeEventListener('scroll', this.handleScroll)
   }
 } 
 </script>
