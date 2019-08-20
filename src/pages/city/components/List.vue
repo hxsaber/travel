@@ -71,6 +71,7 @@ export default {
     this.scroll = new Bscroll(this.$refs.wrapper)
   },
   watch: {
+    // 对letter监听  如果变化了说明点击了其他字母
     letter () {
       if (this.letter) {
         const element = this.$refs[this.letter][0]

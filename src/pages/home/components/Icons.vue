@@ -32,6 +32,7 @@ export default {
         }
     },
     computed:{
+        // 将iconList按每8个为一大组进行轮播循环，超过8的在第二页轮播图
         pages () {
             const pages = []
             this.list.forEach((item,index) => {

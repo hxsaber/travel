@@ -33,7 +33,7 @@ export default {
     return {
       touchStatus: false,
       startY: 0,
-      timer: null
+      timer: null // 截流
     }
   },
   updated () {
@@ -41,6 +41,7 @@ export default {
   },
   methods: {
     handleLetterClick (e) {
+      // 参数e是点击事件 e.target.innerHTML 来获取点击的文字
       this.$emit('change', e.target.innerText)
     },
     handleTouchStart () {

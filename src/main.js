@@ -12,8 +12,8 @@ import './assets/styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
-fastClick.attach(document.body)
-Vue.use(VueAwesomeSwiper)
+fastClick.attach(document.body) // 移动端三百毫秒点击问题
+Vue.use(VueAwesomeSwiper) // 轮播图组件
     /* eslint-disable no-new */
 new Vue({
     el: '#app',

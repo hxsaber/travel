@@ -35,14 +35,17 @@ export default{
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState(['city'])// vuex获取城市数据
   },
   methods: {
+    // 用axios获取数据
     getHomeInfo () {
       axios.get('/api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
+    // 获取数据成功后打印出来
     getHomeInfoSucc (res) {
+      // res为返回的数据
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
@@ -59,6 +62,7 @@ export default{
   },
   activated () {
     if (this.lastCity !== this.city) {
+      // 返回主页时选择的城市和上次的不一样 再次调用ajax请求
       this.lastCity = this.city
       this.getHomeInfo()
     }

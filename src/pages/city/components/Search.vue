@@ -32,7 +32,7 @@ export default {
   data () {
     return {
       keyword: '',
-      list: []
+      list: []// 保存匹配到的元素的数组
     }
   },
   computed: {
@@ -64,6 +64,7 @@ export default {
       this.timer = setTimeout(() => {
         const result =[]
         for(let i in this.cities) {
+           // 找寻匹配的信息 找到所有与keyword匹配的value 放到result数组
           this.cities[i].forEach((value) => {
             if (value.spell.indexOf(this.keyword) > -1 || value.name.indexOf(this.keyword) > -1) {
               result.push(value)

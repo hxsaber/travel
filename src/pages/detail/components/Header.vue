@@ -27,8 +27,8 @@ export default {
     handleScroll () {
       const top = document.documentElement.scrollTop
       if (top > 52) {
-        const opacity = top / 140
-        this.opacityStyle = { opacity }
+        const opacity = top / 140 // 渐显效果
+        this.opacityStyle = { opacity } // 保存进要用的opacity中
         this.showAbs = false
       } else {
         this.showAbs = true
@@ -39,6 +39,7 @@ export default {
     window.addEventListener('scroll', this.handleScroll)
   },
   deactivated () {
+    // 切换界面时解绑全局监听
     window.removeEventListener('scroll', this.handleScroll)
   }
 } 
